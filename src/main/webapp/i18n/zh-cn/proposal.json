@@ -1,0 +1,28 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "proposal": {
+      "home": {
+        "title": "Proposals",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Proposal",
+        "createOrEditLabel": "创建或编辑 Proposal",
+        "notFound": "No Proposals found"
+      },
+      "created": "Proposal {{ param }} 创建成功",
+      "updated": "Proposal {{ param }} 更新成功",
+      "deleted": "Proposal {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Proposal {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Proposal"
+      },
+      "id": "Id",
+      "title": "Title",
+      "archive": "Archive",
+      "state": "State",
+      "comments": "Comments",
+      "student": "Student"
+    }
+  }
+}

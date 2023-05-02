@@ -1,0 +1,11 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "State": {
+      "null": "",
+      "RECHAZADA": "RECHAZADA",
+      "APROBADA": "APROBADA",
+      "APLAZADA": "APLAZADA",
+      "CONDICIONADA": "CONDICIONADA"
+    }
+  }
+}

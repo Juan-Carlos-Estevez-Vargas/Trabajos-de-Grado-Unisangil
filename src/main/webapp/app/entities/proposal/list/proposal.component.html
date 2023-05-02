@@ -1,0 +1,121 @@
+<div>
+  <h2 id="page-heading" data-cy="ProposalHeading">
+    <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.home.title">Proposals</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.home.refreshListLabel">Refrescar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-proposal"
+        [routerLink]="['/proposal/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.home.createLabel"> Crear nuevo Proposal </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="proposals?.length === 0">
+    <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.home.notFound">Ningún Proposals encontrado</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="proposals && proposals.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.id">Id</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="title">
+            <div class="d-flex">
+              <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.title">Title</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="archive">
+            <div class="d-flex">
+              <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.archive">Archive</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="state">
+            <div class="d-flex">
+              <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.state">State</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="comments">
+            <div class="d-flex">
+              <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.comments">Comments</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="student">
+            <div class="d-flex">
+              <span jhiTranslate="trabajosDeGradoUnisangilApp.proposal.student">Student</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody
+        infinite-scroll
+        (scrolled)="loadPage(page + 1)"
+        [infiniteScrollDisabled]="page - 1 >= links['last']"
+        [infiniteScrollDistance]="0"
+      >
+        <tr *ngFor="let proposal of proposals; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/proposal', proposal.id, 'view']">{{ proposal.id }}</a>
+          </td>
+          <td>{{ proposal.title }}</td>
+          <td>{{ proposal.archive }}</td>
+          <td jhiTranslate="{{ 'trabajosDeGradoUnisangilApp.State.' + proposal.state }}">{{ proposal.state }}</td>
+          <td>{{ proposal.comments }}</td>
+          <td>{{ proposal.student }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/proposal', proposal.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Vista</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/proposal', proposal.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+              </button>
+
+              <button type="submit" (click)="delete(proposal)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Eliminar</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
