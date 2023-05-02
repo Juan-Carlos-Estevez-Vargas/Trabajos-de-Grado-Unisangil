@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20230502234427",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "proposal",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "archive",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "State",
+      "fieldValues": "RECHAZADA,APROBADA,APLAZADA,CONDICIONADA"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "student",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "not an ignored comment",
+  "jpaMetamodelFiltering": false,
+  "name": "Proposal",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,28 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "proposal": {
+      "home": {
+        "title": "Proposals",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Proposal",
+        "createOrEditLabel": "Genera o modifica un Proposal",
+        "notFound": "No Proposals found"
+      },
+      "created": "&Egrave; stato generato un nuovo Proposal con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Proposal identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Proposal con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Proposal {{ id }}?"
+      },
+      "detail": {
+        "title": "Proposal"
+      },
+      "id": "Id",
+      "title": "Title",
+      "archive": "Archive",
+      "state": "State",
+      "comments": "Comments",
+      "student": "Student"
+    }
+  }
+}

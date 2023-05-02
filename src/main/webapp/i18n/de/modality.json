@@ -1,0 +1,26 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "modality": {
+      "home": {
+        "title": "Modalities",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Modality erstellen",
+        "createOrEditLabel": "Modality erstellen oder bearbeiten",
+        "notFound": "Keine Modalities gefunden"
+      },
+      "created": "Modality erstellt mit ID {{ param }}",
+      "updated": "Modality aktualisiert mit ID {{ param }}",
+      "deleted": "Modality gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Modality {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Modality"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "document": "Document"
+    }
+  }
+}

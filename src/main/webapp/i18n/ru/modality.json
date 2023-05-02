@@ -1,0 +1,26 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "modality": {
+      "home": {
+        "title": "Modalities",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Modality",
+        "createOrEditLabel": "Создать или отредактировать Modality",
+        "notFound": "Modalities не найдено"
+      },
+      "created": "Новый Modality создан с идентификатором {{ param }}",
+      "updated": "Modality обновлен с идентификатором {{ param }}",
+      "deleted": "Modality удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Modality {{ id }}?"
+      },
+      "detail": {
+        "title": "Modality"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "document": "Document"
+    }
+  }
+}
