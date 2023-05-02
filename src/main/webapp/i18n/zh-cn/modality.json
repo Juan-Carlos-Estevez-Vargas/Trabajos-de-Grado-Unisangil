@@ -1,0 +1,26 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "modality": {
+      "home": {
+        "title": "Modalities",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Modality",
+        "createOrEditLabel": "创建或编辑 Modality",
+        "notFound": "No Modalities found"
+      },
+      "created": "Modality {{ param }} 创建成功",
+      "updated": "Modality {{ param }} 更新成功",
+      "deleted": "Modality {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Modality {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Modality"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "document": "Document"
+    }
+  }
+}

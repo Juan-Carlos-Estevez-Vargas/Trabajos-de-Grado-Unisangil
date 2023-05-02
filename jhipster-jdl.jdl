@@ -1,0 +1,32 @@
+// an ignored comment
+/** not an ignored comment */
+entity Proposal {
+	id Long,
+	title String,
+	archive String,
+	state State,
+    comments String,
+    student String
+}
+
+enum State {
+	RECHAZADA, APROBADA, APLAZADA, CONDICIONADA
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Modality {
+	id Long,
+	name String,
+	description String,
+    document String
+}
+
+// Set pagination options
+paginate Modality, Proposal with infinite-scroll
+
+
+//Use Data Transfer Objects (DTO)
+dto * with mapstruct

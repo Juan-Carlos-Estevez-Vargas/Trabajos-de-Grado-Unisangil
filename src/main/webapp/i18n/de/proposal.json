@@ -1,0 +1,28 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "proposal": {
+      "home": {
+        "title": "Proposals",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Proposal erstellen",
+        "createOrEditLabel": "Proposal erstellen oder bearbeiten",
+        "notFound": "Keine Proposals gefunden"
+      },
+      "created": "Proposal erstellt mit ID {{ param }}",
+      "updated": "Proposal aktualisiert mit ID {{ param }}",
+      "deleted": "Proposal gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Proposal {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Proposal"
+      },
+      "id": "Id",
+      "title": "Title",
+      "archive": "Archive",
+      "state": "State",
+      "comments": "Comments",
+      "student": "Student"
+    }
+  }
+}

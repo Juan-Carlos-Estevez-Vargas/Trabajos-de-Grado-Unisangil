@@ -1,0 +1,26 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "modality": {
+      "home": {
+        "title": "Modalities",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Modality",
+        "createOrEditLabel": "Créer ou éditer un Modality",
+        "notFound": "Aucun Modality trouvé"
+      },
+      "created": "Un nouveau Modality a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Modality avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Modality avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Modality {{ id }} ?"
+      },
+      "detail": {
+        "title": "Modality"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "document": "Document"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="modality">
+      <h2 data-cy="modalityDetailsHeading"><span jhiTranslate="trabajosDeGradoUnisangilApp.modality.detail.title">Modality</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="trabajosDeGradoUnisangilApp.modality.id">Id</span></dt>
+        <dd>
+          <span>{{ modality.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="trabajosDeGradoUnisangilApp.modality.name">Name</span></dt>
+        <dd>
+          <span>{{ modality.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="trabajosDeGradoUnisangilApp.modality.description">Description</span></dt>
+        <dd>
+          <span>{{ modality.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="trabajosDeGradoUnisangilApp.modality.document">Document</span></dt>
+        <dd>
+          <span>{{ modality.document }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Volver</span>
+      </button>
+
+      <button type="button" [routerLink]="['/modality', modality.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+      </button>
+    </div>
+  </div>
+</div>
