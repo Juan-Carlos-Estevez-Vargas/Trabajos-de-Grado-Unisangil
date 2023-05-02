@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "Trabajos_de_Grado_Unisangil",
+    "title": "Trabajos de Grado Unisangil",
     "browsehappy": "Está usando un navegador <strong>no actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=es\">actualice su navegador</a> para mejorar su experiencia.",
     "menu": {
       "home": "Inicio",
@@ -16,7 +16,11 @@
         "sessions": "Sesiones",
         "login": "Iniciar sesión",
         "logout": "Cerrar la sesión",
-        "register": "Crear una cuenta"
+        "register": "Crear una cuenta",
+        "messages": {
+          "login": "¿Deseas iniciar sesión?",
+          "loginLink": "Inicia Sesión"
+        }
       },
       "admin": {
         "main": "Administración",
