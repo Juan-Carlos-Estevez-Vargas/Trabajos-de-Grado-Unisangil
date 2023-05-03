@@ -1,0 +1,31 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "tutor": {
+      "home": {
+        "title": "Tutors",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Tutor",
+        "createOrEditLabel": "创建或编辑 Tutor",
+        "notFound": "No Tutors found"
+      },
+      "created": "Tutor {{ param }} 创建成功",
+      "updated": "Tutor {{ param }} 更新成功",
+      "deleted": "Tutor {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Tutor {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Tutor"
+      },
+      "id": "Id",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "hireDate": "Hire Date",
+      "help": {
+        "id": "The firstname attribute."
+      }
+    }
+  }
+}

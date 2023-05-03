@@ -1,0 +1,31 @@
+{
+  "trabajosDeGradoUnisangilApp": {
+    "tutor": {
+      "home": {
+        "title": "Tutors",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Tutor erstellen",
+        "createOrEditLabel": "Tutor erstellen oder bearbeiten",
+        "notFound": "Keine Tutors gefunden"
+      },
+      "created": "Tutor erstellt mit ID {{ param }}",
+      "updated": "Tutor aktualisiert mit ID {{ param }}",
+      "deleted": "Tutor gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Tutor {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Tutor"
+      },
+      "id": "Id",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "hireDate": "Hire Date",
+      "help": {
+        "id": "The firstname attribute."
+      }
+    }
+  }
+}

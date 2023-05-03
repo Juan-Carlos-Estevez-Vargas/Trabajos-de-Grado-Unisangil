@@ -9,6 +9,7 @@
         "main": "Entità",
         "proposal": "Proposal",
         "modality": "Modality",
+        "tutor": "Tutor",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
