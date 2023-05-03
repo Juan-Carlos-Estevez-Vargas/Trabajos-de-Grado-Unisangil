@@ -1,11 +1,11 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 794px) {
   .home-img,
   .credentials {
     display: none;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 795px) and (max-width: 992px) {
   .home-img {
     img {
       width: 190%;
@@ -16,11 +16,16 @@
   }
 }
 
-.home-component {
-  margin-top: 7%;
-}
+@media screen and (min-width: 993px) {
+  .home-component {
+    margin-top: 7%;
+  }
 
-.row {
-  justify-content: space-between !important
-  ;
+  .home-img {
+    margin-top: -5%;
+
+    img {
+      width: 130%;
+    }
+  }
 }
