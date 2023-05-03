@@ -16,11 +16,14 @@
   }
 }
 
-.home-component {
+@media screen and .home-component {
   margin-top: 7%;
 }
 
-.row {
-  justify-content: space-between !important
-  ;
+.home-img {
+  margin-top: -5%;
+
+  img {
+    width: 130%;
+  }
 }
