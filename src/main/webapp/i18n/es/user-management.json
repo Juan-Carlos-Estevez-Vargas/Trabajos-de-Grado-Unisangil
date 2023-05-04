@@ -19,6 +19,7 @@
     "firstName": "Nombre",
     "lastName": "Apellidos",
     "email": "Email",
+    "isActivated": "¿Activo?",
     "activated": "Activado",
     "deactivated": "Desactivado",
     "profiles": "Perfiles",
