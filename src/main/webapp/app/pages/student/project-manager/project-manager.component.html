@@ -1,1 +1,27 @@
-<p>project-manager works!</p>
+<div class="container">
+  <div class="row">
+    <div>
+      <h2 class="mx-auto">Directores de Proyecto</h2>
+    </div>
+
+    <div class="text-center" id="no-result" *ngIf="managers?.length === 0">
+      <div>
+        <span jhiTranslate="trabajosDeGradoUnisangilApp.modality.home.notFound">Ningún Director encontrado</span>
+      </div>
+      <div>
+        <img src="../../../../content/images/not-found.png" class="card-img-top mx-auto mt-2 not-found-img" alt="..." />
+      </div>
+    </div>
+
+    <div class="col-md-3 mt-3" *ngFor="let manager of managers">
+      <div class="card text-center align-self-stretch">
+        <img src="../../../../content/images/default-project-manager-img.png" class="card-img-top smaller-image mx-auto mt-2" alt="..." />
+        <div class="card-body">
+          <h3 class="card-title text-white font-weight-bold">{{ manager.firstName }} {{ manager.lastName }}</h3>
+          <p class="card-text">{{ manager.email }}</p>
+          <a href="#" class="btn btn-primary">Seleccionar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
