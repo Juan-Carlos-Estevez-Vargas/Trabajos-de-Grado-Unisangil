@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TutorService } from 'app/entities/tutor/service/tutor.service';
+import { ITutor } from 'app/entities/tutor/tutor.model';
 
 @Component({
   selector: 'jhi-project-manager',
@@ -6,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-manager.component.scss'],
 })
 export class ProjectManagerComponent implements OnInit {
-  constructor() {}
+  managers: ITutor[] = [];
 
-  ngOnInit(): void {}
+  constructor(private tutorService: TutorService) {}
+
+  ngOnInit(): void {
+    this.getTutors();
+  }
+
+  getTutors(): void {
+    this.tutorService.query().subscribe(response => {
+      this.managers = response.body ?? [];
+    });
+  }
 }
