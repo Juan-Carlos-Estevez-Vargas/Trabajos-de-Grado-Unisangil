@@ -88,7 +88,8 @@
         <lifecycle-mapping.version>1.0.0</lifecycle-mapping.version>
         <properties-maven-plugin.version>1.1.0</properties-maven-plugin.version>
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
-
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.login>${env.TRABAJOS_GRADO_UNISANGIL_SONAR_TOKEN}</sonar.login>
         <!-- jhipster-needle-maven-property -->
     </properties>
 
@@ -355,6 +356,7 @@
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar-maven-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
