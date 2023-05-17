@@ -1,38 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 col-md-3 home-img">
-      <img src="../../content/images/modelo_estudiar.png" alt="" />
-    </div>
-    <div class="col-lg-8 col-md-8 col-sm-12 mx-auto text-center home-component">
-      <h1 class="display-4"><span jhiTranslate="home.title">¡Bienvenido!</span></h1>
-
-      <div class="alert alert-warning">
-        <p class="lead" jhiTranslate="home.subtitle">
-          Somos una institución de educación superior que en las regiones forma profesionales competentes para su desarrollo en el mundo.
-        </p>
-      </div>
-
-      <div [ngSwitch]="account !== null">
-        <div class="alert alert-success" *ngSwitchCase="true">
-          <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message" [translateValues]="{ username: account.login }"
-            >Está conectado como "{{ account.login }}".</span
-          >
-        </div>
-
-        <div class="alert alert-warning credentials" *ngSwitchCase="false">
-          <span jhiTranslate="global.messages.info.authenticated.prefix">Si desea </span>
-          <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">iniciar sesión</a
-          ><span jhiTranslate="global.messages.info.authenticated.suffix"
-            >, puede intentar con las cuentas predeterminadas:<br />- Administrador (usuario="admin" y contraseña="admin") <br />- Usuario
-            (usuario="user" y contraseña="user").</span
-          >
-        </div>
-
-        <div class="alert alert-success" *ngSwitchCase="false">
-          <span jhiTranslate="global.menu.account.messages.login">¿Deseas iniciar sesión?</span>&nbsp;
+<section class="banner_main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-7">
+        <div class="text-bg">
+          <h1>¡Bienvenido! <br />Trabajos de Grado</h1>
+          <span>Fundación Universitaria de San Gil</span>
+          <p>Sistema de gestión y administración de trabajos de grado de la Fundación Universitaria de Sal Gil (Unisangil)</p>
           <a class="alert-link" (click)="login()" jhiTranslate="global.menu.account.messages.loginLink">Inicia Sesión</a>
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-5">
+        <div class="ban_img">
+          <figure><img src="../../content/images/home-man.png" alt="#" /></figure>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
