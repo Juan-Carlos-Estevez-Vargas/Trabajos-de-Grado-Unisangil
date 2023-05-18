@@ -13,6 +13,7 @@
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20230502234427_added_entity_Proposal.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20230502234428_added_entity_Modality.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230503164730_added_entity_Tutor.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
