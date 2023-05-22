@@ -88,8 +88,7 @@
         <lifecycle-mapping.version>1.0.0</lifecycle-mapping.version>
         <properties-maven-plugin.version>1.1.0</properties-maven-plugin.version>
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
-        <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>${env.TRABAJOS_GRADO_UNISANGIL_SONAR_TOKEN}</sonar.login>
+
         <!-- jhipster-needle-maven-property -->
     </properties>
 
@@ -110,12 +109,6 @@
         <dependency>
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.annotation</groupId>
@@ -362,7 +355,6 @@
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>${sonar-maven-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -546,16 +538,6 @@
                     <configuration>
                       <javaVersion>${java.version}</javaVersion>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </dependency>
-                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>

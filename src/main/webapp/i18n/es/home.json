@@ -1,8 +1,7 @@
 {
   "home": {
     "title": "¡Bienvenido a Unisangil!",
-    "subtitle": "Somos una institución de educación superior que en las regiones forma profesionales competentes para su desarrollo en el mundo.",
-    "information": "En este apartado podrás gestionar todo lo correspondiente a los trabajos de grado.",
+    "subtitle": "Esta es su página de inicio",
     "logged": {
       "message": "Está conectado como \"{{username}}\"."
     },
