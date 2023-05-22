@@ -25,6 +25,11 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ActiveMenuDirective } from './layouts/navbar/active-menu.directive';
 import { ErrorComponent } from './layouts/error/error.component';
+import { ModalitiesComponent } from './pages/student/modalities/modalities.component';
+import { ProjectManagerComponent } from './pages/student/project-manager/project-manager.component';
+import { DetailProposalComponent } from './pages/student/detail-proposal/detail-proposal.component';
+import { ProposalStateComponent } from './pages/student/proposal-state/proposal-state.component';
+import { DegreeWorkComponent } from './pages/student/degree-work/degree-work.component';
 
 @NgModule({
   imports: [
@@ -45,7 +50,19 @@ import { ErrorComponent } from './layouts/error/error.component';
     { provide: NgbDateAdapter, useClass: NgbDateDayjsAdapter },
     httpInterceptorProviders,
   ],
-  declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+  declarations: [
+    MainComponent,
+    NavbarComponent,
+    ErrorComponent,
+    PageRibbonComponent,
+    ActiveMenuDirective,
+    FooterComponent,
+    ModalitiesComponent,
+    ProjectManagerComponent,
+    DetailProposalComponent,
+    ProposalStateComponent,
+    DegreeWorkComponent,
+  ],
   bootstrap: [MainComponent],
 })
 export class AppModule {

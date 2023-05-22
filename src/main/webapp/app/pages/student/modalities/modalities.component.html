@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <h2 class="mx-auto">Modalidades</h2>
+    </div>
+
+    <div class="text-center" id="no-result" *ngIf="modalities?.length === 0">
+      <div>
+        <span jhiTranslate="trabajosDeGradoUnisangilApp.modality.home.notFound">Ningún Modalities encontrado</span>
+      </div>
+      <div>
+        <img src="../../../../content/images/not-found.png" class="card-img-top mx-auto mt-2 not-found-img" alt="..." />
+      </div>
+    </div>
+
+    <div class="col-md-4 mt-3" *ngFor="let modality of modalities">
+      <div class="card text-center align-self-stretch">
+        <img src="../../../../content/images/default-img-modalities.png" class="card-img-top smaller-image mx-auto mt-2" alt="..." />
+        <div class="card-body">
+          <h3 class="card-title text-white font-weight-bold">{{ modality.name }}</h3>
+          <p class="card-text">{{ modality.description }}</p>
+          <a href="#" class="btn btn-primary">Seleccionar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
