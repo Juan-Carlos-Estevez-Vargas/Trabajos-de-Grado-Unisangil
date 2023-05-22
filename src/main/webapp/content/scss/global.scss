@@ -70,11 +70,6 @@ Generic styles
 
 .form-control {
   background-color: #fff;
-
-  &:focus {
-    box-shadow: 0 0 5px blue;
-    background-color: #ededed;
-  }
 }
 
 .readonly {
@@ -125,14 +120,6 @@ Custom alerts for notification
       bottom: 55px;
     }
   }
-}
-
-.alert-danger {
-  background: crimson;
-}
-
-.text-danger {
-  color: crimson;
 }
 
 @media screen and (min-width: 480px) {

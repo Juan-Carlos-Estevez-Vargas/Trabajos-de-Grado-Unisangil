@@ -1,81 +1,12 @@
-.ftco-section {
-  padding: 1em 0;
+.back-img {
+  background-image: url('../../content/images/login.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.login-wrap {
-  position: relative;
-  background: #fff;
-  width: 50%;
-
-  h3 {
-    font-weight: 300;
-  }
-}
-
-.text-wrap {
-  white-space: normal !important;
-  width: 50%;
-  background: #036b4e;
-  background: -moz-linear-gradient(-45deg, #036b4e 0%, #36a37f 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, #036b4e), color-stop(100%, #36a37f));
-  background: -webkit-linear-gradient(-45deg, #036b4e 0%, #36a37f 100%);
-  background: -o-linear-gradient(-45deg, #036b4e 0%, #36a37f 100%);
-  background: -ms-linear-gradient(-45deg, #036b4e 0%, #36a37f 100%);
-  background: -webkit-linear-gradient(315deg, #036b4e 0%, #36a37f 100%);
-  background: -o-linear-gradient(315deg, #036b4e 0%, #36a37f 100%);
-  background: linear-gradient(135deg, #036b4e 0%, #36a37f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#036b4e', endColorstr='#36a37f', GradientType=1 );
-  font-weight: 900;
-  color: #fff;
-}
-
-@media (max-width: 991.98px) {
-  .text-wrap,
-  .login-wrap {
-    width: 100%;
-  }
-}
-
-.btn.btn-white {
-  background: #fff;
-  border: 1px solid #fff;
-  color: #fff;
-
-  &:hover {
-    border: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-  }
-
-  &.btn-outline-white {
-    border: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-
-    &:hover {
-      border: 1px solid transparent;
-      background: #fff;
-      color: #000;
-    }
-  }
-}
-
-.btn-login {
-  width: 100%;
-}
-
-.paragraph {
-  font-weight: lighter;
-  font-size: 0.8em;
-  text-align: justify;
-}
-
-@media only screen and (max-width: 767px) {
-  .hidden {
-    display: none;
-  }
-
-  .utils {
-    display: flex;
-  }
+.back-component {
+  margin: 3%;
+  background: rgb(6, 43, 53);
+  padding: 1.5em;
 }

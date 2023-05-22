@@ -5,15 +5,11 @@ import java.io.Serializable;
 import javax.persistence.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * not an ignored comment
  */
 @Entity
-@Getter
-@Setter
 @Table(name = "proposal")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @SuppressWarnings("common-java:DuplicatedBlocks")
@@ -44,9 +40,21 @@ public class Proposal implements Serializable {
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
+    public Long getId() {
+        return this.id;
+    }
+
     public Proposal id(Long id) {
         this.setId(id);
         return this;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return this.title;
     }
 
     public Proposal title(String title) {
@@ -54,9 +62,25 @@ public class Proposal implements Serializable {
         return this;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getArchive() {
+        return this.archive;
+    }
+
     public Proposal archive(String archive) {
         this.setArchive(archive);
         return this;
+    }
+
+    public void setArchive(String archive) {
+        this.archive = archive;
+    }
+
+    public State getState() {
+        return this.state;
     }
 
     public Proposal state(State state) {
@@ -64,9 +88,25 @@ public class Proposal implements Serializable {
         return this;
     }
 
+    public void setState(State state) {
+        this.state = state;
+    }
+
+    public String getComments() {
+        return this.comments;
+    }
+
     public Proposal comments(String comments) {
         this.setComments(comments);
         return this;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+
+    public String getStudent() {
+        return this.student;
     }
 
     public Proposal student(String student) {
@@ -74,8 +114,11 @@ public class Proposal implements Serializable {
         return this;
     }
 
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and
-    // setters here
+    public void setStudent(String student) {
+        this.student = student;
+    }
+
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
     public boolean equals(Object o) {
@@ -90,8 +133,7 @@ public class Proposal implements Serializable {
 
     @Override
     public int hashCode() {
-        // see
-        // https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
         return getClass().hashCode();
     }
 
@@ -99,12 +141,12 @@ public class Proposal implements Serializable {
     @Override
     public String toString() {
         return "Proposal{" +
-                "id=" + getId() +
-                ", title='" + getTitle() + "'" +
-                ", archive='" + getArchive() + "'" +
-                ", state='" + getState() + "'" +
-                ", comments='" + getComments() + "'" +
-                ", student='" + getStudent() + "'" +
-                "}";
+            "id=" + getId() +
+            ", title='" + getTitle() + "'" +
+            ", archive='" + getArchive() + "'" +
+            ", state='" + getState() + "'" +
+            ", comments='" + getComments() + "'" +
+            ", student='" + getStudent() + "'" +
+            "}";
     }
 }

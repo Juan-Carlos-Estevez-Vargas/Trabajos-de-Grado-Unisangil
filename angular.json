@@ -17,17 +17,6 @@
       "sourceRoot": "src/main/webapp",
       "prefix": "jhi",
       "architect": {
-        "sonarqube": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "tsconfig.sonarqube.json",
-            "sonarProjectKey": "clave-del-proyecto-en-sonarqube",
-            "sonarServer": {
-              "url": "http://localhost:9000",
-              "token": "${env.TRABAJOS_GRADO_UNISANGIL_SONAR_TOKEN}"
-            }
-          }
-        },
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {

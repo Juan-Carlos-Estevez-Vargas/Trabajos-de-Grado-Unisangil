@@ -1,22 +1,32 @@
-entity Tutor {
-	/**
-	* The firstname attribute.
-	*/
-    id Long,
-	firstName String,
-	lastName String,
-	email String unique,
-	phoneNumber String,
-	hireDate Instant,
+// an ignored comment
+/** not an ignored comment */
+entity Proposal {
+	id Long,
+	title String,
+	archive String,
+	state State,
+    comments String,
+    student String
 }
 
-paginate Tutor with pagination
+enum State {
+	RECHAZADA, APROBADA, APLAZADA, CONDICIONADA
+}
 
-// Use Data Transfer Objects (DTO)
-// dto * with mapstruct
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Modality {
+	id Long,
+	name String,
+	description String,
+    document String
+}
 
-// Set service options to all except few
-service all with serviceImpl 
+// Set pagination options
+paginate Modality, Proposal with infinite-scroll
 
-// Set an angular suffix
-// angularSuffix * with mySuffix
+
+//Use Data Transfer Objects (DTO)
+dto * with mapstruct

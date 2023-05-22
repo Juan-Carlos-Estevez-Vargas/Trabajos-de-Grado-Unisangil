@@ -4,15 +4,11 @@ import java.io.Serializable;
 import javax.persistence.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Task entity.\n@author The JHipster team.
  */
 @Entity
-@Getter
-@Setter
 @Table(name = "modality")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @SuppressWarnings("common-java:DuplicatedBlocks")
@@ -36,9 +32,21 @@ public class Modality implements Serializable {
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
+    public Long getId() {
+        return this.id;
+    }
+
     public Modality id(Long id) {
         this.setId(id);
         return this;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public Modality name(String name) {
@@ -46,9 +54,25 @@ public class Modality implements Serializable {
         return this;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
     public Modality description(String description) {
         this.setDescription(description);
         return this;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDocument() {
+        return this.document;
     }
 
     public Modality document(String document) {
@@ -56,8 +80,11 @@ public class Modality implements Serializable {
         return this;
     }
 
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and
-    // setters here
+    public void setDocument(String document) {
+        this.document = document;
+    }
+
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
     public boolean equals(Object o) {
@@ -72,8 +99,7 @@ public class Modality implements Serializable {
 
     @Override
     public int hashCode() {
-        // see
-        // https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
         return getClass().hashCode();
     }
 
@@ -81,10 +107,10 @@ public class Modality implements Serializable {
     @Override
     public String toString() {
         return "Modality{" +
-                "id=" + getId() +
-                ", name='" + getName() + "'" +
-                ", description='" + getDescription() + "'" +
-                ", document='" + getDocument() + "'" +
-                "}";
+            "id=" + getId() +
+            ", name='" + getName() + "'" +
+            ", description='" + getDescription() + "'" +
+            ", document='" + getDocument() + "'" +
+            "}";
     }
 }

@@ -9,7 +9,6 @@
         "main": "数据",
         "proposal": "Proposal",
         "modality": "Modality",
-        "tutor": "Tutor",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

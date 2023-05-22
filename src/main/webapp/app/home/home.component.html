@@ -1,19 +1,32 @@
-<section class="banner_main">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-lg-7">
-        <div class="text-bg">
-          <h1>¡Bienvenido! <br />Trabajos de Grado</h1>
-          <span>Fundación Universitaria de San Gil</span>
-          <p>Sistema de gestión y administración de trabajos de grado de la Fundación Universitaria de Sal Gil (Unisangil)</p>
-          <a class="alert-link" (click)="login()" jhiTranslate="global.menu.account.messages.loginLink">Inicia Sesión</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 mx-auto text-center">
+      <h1 class="display-4"><span jhiTranslate="home.title">¡Bienvenido!</span></h1>
+      <h3 jhiTranslate="global.title">Trabajos De Grado Unisangil</h3>
+
+      <p class="lead" jhiTranslate="home.subtitle">Esta es su página de inicio</p>
+
+      <div [ngSwitch]="account !== null">
+        <div class="alert alert-success" *ngSwitchCase="true">
+          <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message" [translateValues]="{ username: account.login }"
+            >Está conectado como "{{ account.login }}".</span
+          >
         </div>
-      </div>
-      <div class="col-md-5 col-lg-5">
-        <div class="ban_img">
-          <figure><img src="../../content/images/home-man.png" alt="#" /></figure>
+
+        <div class="alert alert-warning" *ngSwitchCase="false">
+          <span jhiTranslate="global.messages.info.authenticated.prefix">Si desea </span>
+          <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">iniciar sesión</a
+          ><span jhiTranslate="global.messages.info.authenticated.suffix"
+            >, puede intentar con las cuentas predeterminadas:<br />- Administrador (usuario="admin" y contraseña="admin") <br />- Usuario
+            (usuario="user" y contraseña="user").</span
+          >
+        </div>
+
+        <div class="alert alert-success" *ngSwitchCase="false">
+          <span jhiTranslate="global.menu.account.messages.login">¿Deseas iniciar sesión?</span>&nbsp;
+          <a class="alert-link" (click)="login()" jhiTranslate="global.menu.account.messages.loginLink">Inicia Sesión</a>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>

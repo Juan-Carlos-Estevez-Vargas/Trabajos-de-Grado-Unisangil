@@ -14,11 +14,6 @@ import { RouterModule } from '@angular/router';
         data: { pageTitle: 'trabajosDeGradoUnisangilApp.modality.home.title' },
         loadChildren: () => import('./modality/modality.module').then(m => m.ModalityModule),
       },
-      {
-        path: 'tutor',
-        data: { pageTitle: 'trabajosDeGradoUnisangilApp.tutor.home.title' },
-        loadChildren: () => import('./tutor/tutor.module').then(m => m.TutorModule),
-      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],
